@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PokedexController!{% endblock %}
+
+{% block body %}
+
+<section class="min-h-screen bg-red-500">
+
+    <div class="px-4 py-5 sm:px-6 flex items-center justify-between">
+
+        <h1 class="text-5xl ml-20 font-medium text-white">
+            Nombre de Pokémon : 20
+        </h1>
+
+        <a href="{{ path('form') }}"
+           class="bg-green-500 text-white px-6 py-3 mr-10 rounded ">
+            Ajouter
+        </a>
+
+    </div>
+
+    {% for i in 1..5 %}
+
+        <div class="h-32 bg-black flex items-center gap-10 px-10 mx-10 mt-6 rounded-none">
+
+            <h3 class="text-white text-3xl font-bold">1</h3>
+
+            <h3 class="text-white text-3xl font-medium">
+                Bulbizarre
+            </h3>
+
+            <img src="{{ asset('images/bulbizare.png') }}"
+                 class="w-28 ml-auto"
+                 alt="Bulbizarre">
+
+        </div>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}
